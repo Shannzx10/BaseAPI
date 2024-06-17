@@ -94,6 +94,9 @@ const swaggerDocument = {
           },
         },
       },
-    }
+    },
+   },
+  "x-request-time": new Date().toISOString(),
+};
 
 module.exports = { swaggerDocument, options };
