@@ -44,23 +44,14 @@ const swaggerDocument = {
     {
       name: "AI",
       description:
-        "API endpoints for artificial intelligence content from various platforms.",
+        "Endpoint Kategori AI.",
     },
-    // {
-    //   name: "Downloader",
-    //   description:
-    //     "API endpoints for downloading content from various platforms.",
-    // },
-    // {
-    //   name: "Tools",
-    //   description: "API endpoints for content tools from multiple platforms.",
-    // },
   ],
   paths: {
-    "/api/ai/luminai": {
+    "/api/ai/goodyai": {
       get: {
         tags: ["AI"],
-        summary: "Chat with GPT AI",
+        summary: "Chat Dengan GoodyAI",
         parameters: [
           {
             in: "query",
