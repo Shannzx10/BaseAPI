@@ -41,26 +41,16 @@ const swaggerDocument = {
     },
   ],
   tags: [
-    {
-      name: "AI",
+       name: "AI",
       description:
-        "API endpoints for artificial intelligence content from various platforms.",
+        "Endpoint Kategori AI.",
     },
-    // {
-    //   name: "Downloader",
-    //   description:
-    //     "API endpoints for downloading content from various platforms.",
-    // },
-    // {
-    //   name: "Tools",
-    //   description: "API endpoints for content tools from multiple platforms.",
-    // },
   ],
   paths: {
-    "/api/ai/chatgpt": {
+    "/api/ai/luminai": {
       get: {
         tags: ["AI"],
-        summary: "Chat with GPT AI",
+        summary: "Chat Dengan Liminai",
         parameters: [
           {
             in: "query",
@@ -104,67 +94,6 @@ const swaggerDocument = {
           },
         },
       },
-    },
-    "/api/ai/gptlogic": {
-      get: {
-        tags: ["AI"],
-        summary: "Chat with GPT Logic",
-        parameters: [
-          {
-            in: "query",
-            name: "query",
-            schema: {
-              type: "string",
-            },
-            required: true,
-            description: inQuery,
-          },
-          {
-            in: "query",
-            name: "prompt",
-            schema: {
-              type: "string",
-            },
-            required: true,
-            description: inQuery,
-          },
-        ],
-        responses: {
-          200: {
-            description: "Result successfully returned",
-            content: {
-              "application/json": {
-                schema: {
-                  type: "object",
-                  properties: {
-                    status: {
-                      type: "boolean",
-                      example: true,
-                    },
-                    developer: {
-                      type: "string",
-                      example: config.options.developer,
-                    },
-                    result: {
-                      type: "object",
-                      properties: {
-                        message: {
-                          type: "string",
-                          example:
-                            "Hello! How can I help you with your prompt?",
-                        },
-                      },
-                    },
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    },
-  },
-  "x-request-time": new Date().toISOString(),
-};
+    }
 
 module.exports = { swaggerDocument, options };
