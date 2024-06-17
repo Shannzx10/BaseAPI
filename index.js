@@ -42,6 +42,6 @@ app.use((err, req, res, next) => {
 
 // Start the Server
 app.listen(config.options.port, () => {
-  console.log(chalk.cyan("HitamAPIs - Base by @Irull2nd"));
+  console.log(chalk.cyan("Shannz APIs"));
   anim(`Server is running on http://localhost:${config.options.port}`);
 });
